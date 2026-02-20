@@ -2,7 +2,7 @@
 
 **Privacy-first professional networking platform** — where a Claude AI agent automatically detects and masks personal contact information in comments, ensuring only the right people can see it.
 
-🔗 **Live Demo:** [privacynet-production.up.railway.app](https://privacynet-production.up.railway.app) &nbsp;|&nbsp; **GitHub:** [Sruthinanam07/privacynet](https://github.com/Sruthinanam07/privacynet)
+**Live Demo:** [privacynet-production.up.railway.app](https://privacynet-production.up.railway.app)
 
 ---
 
