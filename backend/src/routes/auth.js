@@ -40,8 +40,9 @@ router.post('/register', async (req, res) => {
       [emailToken, id, 'verify']
     );
     const { subject, html } = verifyEmailTemplate(name.trim(), emailToken);
-    await sendEmail({ to: email.toLowerCase(), subject, html });
-
+    sendEmail({ to: email.toLowerCase(), subject, html }).catch(err => {
+    console.warn('Verification email failed (non-critical):', err.message);
+    });
     await log(EVENTS.USER_REGISTERED, { actorId: id, ip: req.ip });
 
     const user  = { id, name: name.trim(), email: email.toLowerCase(), headline: headline.trim(), avatar_color: color, email_verified: false };
